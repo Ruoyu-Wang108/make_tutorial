@@ -23,7 +23,7 @@ fish_data <- readRDS(here("data", "clean_fish_data.rds")) %>%
 p <- ggplot(data = fish_data,
             mapping = aes(x = transect,
                           y = count)) +
-  geom_col(fill = "steelblue", color = "black") +                           # Add columns
+  geom_col(fill = "pink", color = "grey60") +                           # Add columns
   theme_minimal() +                                                         # Minimal theme 
   labs(x = "Transect", y = "Abundance (all species)")                       # And axis labels
 

@@ -1,5 +1,8 @@
-draft.html: draft.Rmd results/img/time_series.png results/img/first_year.png results/tab/reg_table.html
+draft.html: draft.Rmd results/img/time_series.png results/img/first_year.png results/tab/reg_table.html results/img/fish4.png
 	Rscript -e "rmarkdown::render('draft.Rmd', quiet = T)"
+
+results/img/fish4.png: scripts/04_figure_3.R data/clean_fish_data.rds
+	Rscript scripts/04_figure_3.R
 
 results/img/time_series.png: scripts/01_figure_1.R data/clean_fish_data.rds
 	Rscript scripts/01_figure_1.R
